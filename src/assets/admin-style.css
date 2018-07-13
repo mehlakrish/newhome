@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700|Exo+2:400,500,600");
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+::selection {
+  background: #00AEEF;
+  color: #fff; }
+
+::-moz-selection {
+  background: #00AEEF;
+  color: #fff; }
+
+body {
+  background-color: #FFF;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  transition: all 250ms;
+  -moz-transition: all 250ms;
+  -webkit-transition: all 250ms; }
+  a:hover, a:focus {
+    outline: none; }
+
+button {
+  transition: all 250ms;
+  -moz-transition: all 250ms;
+  -webkit-transition: all 250ms; }
+
+header, section, footer, aside, article, figure {
+  display: block; }
+
+.clr, .clear {
+  clear: both;
+  line-height: 0;
+  font-size: 0; }
+
+input[type="text"] {
+  border-radius: 0px; }
+
+select {
+  -webkit-appearance: menulist-button;
+  -webkit-border-radius: 0px;
+  border-radius: 0px; }
+
+.dn {
+  display: none; }
+
+.db {
+  display: block; }
+
+body.login-bg {
+  background-color: #00AEEF;
+  position: relative; }
+
+.login-area {
+  background-color: #fff;
+  width: 800px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -400px;
+  padding: 1px;
+  height: 524px; }
+  .login-area .banner-side {
+    width: auto;
+    float: left; }
+  .login-area .form-side {
+    float: right;
+    width: 397px;
+    text-align: center; }
+    .login-area .form-side .logo {
+      margin: 60px 0; }
+    .login-area .form-side .login-form {
+      width: 80%;
+      margin: 0 auto; }
+      .login-area .form-side .login-form .border-style {
+        position: relative;
+        margin: 0 0 30px 0;
+        overflow: hidden; }
+        .login-area .form-side .login-form .border-style:before {
+          background-color: #ddd;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          transform: translateX(0px);
+          transition: all 0.3s ease 0s; }
+        .login-area .form-side .login-form .border-style:hover:before, .login-area .form-side .login-form .border-style:focus:before {
+          transform: translateX(100%); }
+      .login-area .form-side .login-form input[type="text"], .login-area .form-side .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px 0;
+        border: 0;
+        border-bottom: 1px solid #00AEEF;
+        font-size: 18px;
+        color: #9fa1a4;
+        font-family: 'Dosis', sans-serif; }
+      .login-area .form-side .login-form button {
+        background-color: #fdd463;
+        transition: all 0.3s ease 0s;
+        border: 0;
+        width: 100%;
+        padding: 13px 0;
+        font-size: 20px;
+        font-family: 'Dosis', sans-serif; }
+        .login-area .form-side .login-form button:hover {
+          background-color: #fdc11d;
+          cursor: pointer; }
+
+.wrapper {
+  width: 1260px;
+  margin: 0 auto; }
+
+header .logo {
+  float: left;
+  padding: 13px 0; }
+header nav {
+  float: right;
+  margin: 50px 0 0 0;
+  width: 70%; }
+  header nav ul li {
+    float: left;
+    list-style: none; }
+    header nav ul li:last-child {
+      float: right; }
+      header nav ul li:last-child a {
+        color: #00AEEF; }
+    header nav ul li a {
+      @inlcude text-style($black, 300, 17.23px, $dosis);
+      color: #000;
+      font-size: 17.23px;
+      font-weight: 300;
+      text-transform: uppercase; }
+      header nav ul li a:hover, header nav ul li a.active {
+        color: #00AEEF; }
+
+.blue-area {
+  background-color: #00AEEF;
+  padding: 20px 0; }
+  .blue-area .white-area {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px; }
+    .blue-area .white-area .scheduler-table h2 {
+      font-weight: 300;
+      margin-bottom: 20px; }
+    .blue-area .white-area .scheduler-table table {
+      width: 100%; }
+      .blue-area .white-area .scheduler-table table thead tr th {
+        background-color: #fdd463;
+        color: #000;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: left;
+        padding: 5px 10px;
+        border-bottom: 1px solid #ffc218; }
+        .blue-area .white-area .scheduler-table table thead tr th:last-child {
+          text-align: right; }
+      .blue-area .white-area .scheduler-table table tbody tr td {
+        color: #000;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: left;
+        padding: 5px 10px; }
+        .blue-area .white-area .scheduler-table table tbody tr td:last-child {
+          text-align: right; }
+      .blue-area .white-area .scheduler-table table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3; }
+
+/*# sourceMappingURL=admin-style.css.map */
