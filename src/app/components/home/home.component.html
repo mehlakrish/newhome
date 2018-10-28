@@ -7,6 +7,10 @@
 				<div class="border-style">
 					<input type="text" formControlName="userName"	placeholder="Username">
 				</div>
+				<div *ngIf="(userForm.controls['userName'].errors && !userForm.controls['userName'].pristine) || userForm.invalid" class="error-msg">
+						<div [hidden]="!userForm.controls['userName'].errors.required">Email is required.</div>
+					 
+					  </div>
 
 				<div class="border-style">
 						<input type="text" formControlName="password"	placeholder="Password">
