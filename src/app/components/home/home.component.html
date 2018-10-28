@@ -1,12 +1,36 @@
 <div class="login-area">
 	<div class="banner-side"><img [src]="imgPath"></div>
-	<div class="form-side">
+	<div class="form-side" *ngIf="!submitted">
 		<div class="logo"><img src="./assets/img/newhome-monitor-logo.png"></div>
 		<div class="login-form">
-			<div class="border-style"><input type="text" placeholder="Username"></div>
-			<div class="border-style"><input type="password" placeholder="Password"></div>
-			<button (click)="onSubmit()">Submit &gt;&gt;</button>
+			<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+				<div class="border-style">
+					<input type="text" formControlName="userName"	placeholder="Username">
+				</div>
+
+				<div class="border-style">
+						<input type="text" formControlName="password"	placeholder="Password">
+				</div>
+					
+				<div class="border-style">
+		
+				<select formControlName="country">
+					<option *ngFor="let c of countries" [value]="c.id">{{c.name}}</option>
+				  </select>
+				</div>
+				<div class="border-style">
+						<input type="radio" formControlName="sex" value="m"	> Male
+						<input type="radio" formControlName="sex" value="f"	> Female
+				</div>
+				<div class="border-style">
+						<input type="checkbox" formControlName="tmc"> T&C
+				</div>
+			<button>Submit &gt;&gt;</button>
+		</form>
 		</div>
+	</div>
+	<div *ngIf="submitted">
+		{{ userForm.value | json }}
 	</div>
 	<div class="clr"></div>
 </div>
